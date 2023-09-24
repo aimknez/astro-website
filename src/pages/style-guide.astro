@@ -1,0 +1,674 @@
+---
+import LanderLayout from "../layouts/LanderLayout.astro";
+import logos from "../images/hostpapa.svg";
+---
+
+<LanderLayout>
+  <header class="bg-blue-100 w-full">
+    <div class="container mx-auto text-center py-28">
+      <img src={logos.src} alt="HostPapa" class="mx-auto" width="178" height="34" />
+      <h1 class="lg:w-3/4 mx-auto py-8">HostPapa Theme V8 Base Style Guide</h1>
+      <nav class="lg:w-6/12 mx-auto">
+        <a href="#typography">Typography,</a>
+        <a href="#buttons">Buttons,</a>
+        <a href="#badges">Badges,</a>
+        <a href="#grid">Grid layout /w flex,</a>
+        <a href="#flex">Flex layout,</a>
+        <a href="#text-groups-grid">Text groups /w grid,</a>
+        <a href="#text-groups-flex">Text groups /w flex,</a>
+        <a href="#carousel">Carousel,</a>
+        <a class="isdisabled">Hero,</a>
+        <a class="isdisabled">Tabs,</a>
+        <a class="isdisabled">Colours,</a>
+        <a class="isdisabled">Tooltips,</a>
+        <a class="isdisabled">Icon library,</a>
+      </nav>
+    </div>
+  </header>
+  <svg width="100%" height="100%" viewBox="0 0 500 15" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
+    <g transform="matrix(1,0,0,1,-142.177,-227.744)">
+      <g transform="matrix(1,0,0,0.113732,142.177,227.744)">
+        <path d="M0,100C150,200 350,0 500,100L500,0L0,0L0,100Z" class="fill-blue-100" style="fill-rule: nonzero"></path>
+      </g>
+    </g>
+  </svg>
+  <section id="typography" class="py-28">
+    <div class="container mx-auto">
+      <div class="max-w-full grid gap-8 grid-cols-1">
+        <h2 class="h1">Typography</h2>
+        <p class="lead pb-20">Roboto for body text with Poppins for titles / display, both from Googles font library. All based on clean greys (that will probably be slightly shifted toward blue once final colors are set), whatever the final pick it will all pass WCAG AA level on all sizes / background color combinations.</p>
+      </div>
+      <div class="max-w-full grid gap-8 grid-cols-1 md:grid-cols-2">
+        <div class="col-span-1">
+          <h3>Body</h3>
+          <p class="pb-8 pt-6">Roboto primarily in #666666 with #222222 highlights, using all styles Regular for typical body text, Bold for highlights, and Italic for quotes. Roboto is also used for kicker titles.</p>
+          <p class="text-xs pb-3">text-xs font-size: .75rem</p>
+          <p class="text-xs pb-3">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-sm font-size: .875rem</p>
+          <p class="text-sm pb-3">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-base font-size: 1rem</p>
+          <p class="text-base pb-3">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-lg font-size: 1.125rem</p>
+          <p class="text-lg pb-3">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-xl font-size: 1.25rem</p>
+          <p class="text-xl pb-3">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-2xl font-size: 1.5rem</p>
+          <p class="text-2xl pb-3">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-3xl font-size: 1.875rem</p>
+          <p class="text-3xl pb-3 truncate">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-4xl font-size: 2.25rem</p>
+          <p class="text-4xl pb-3 truncate">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-5xl font-size: 3rem</p>
+          <p class="text-5xl pb-3 truncate">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-6xl font-size: 4rem</p>
+          <p class="text-6xl pb-3 truncate">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+        <div class="col-span-1">
+          <h3>Display</h3>
+          <p class="pb-8 pt-6">Poppins primarily in #222222 with color gradient highlights, primarily in Semibold (600) weight.<br />&nbsp;</p>
+          <p class="text-xs pb-3">text-xs font-size: .75rem</p>
+          <p class="text-xs pb-3 font-display">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-sm font-size: .875rem</p>
+          <p class="text-sm pb-3 font-display">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-base font-size: 1rem</p>
+          <p class="text-base pb-3 font-display">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-lg font-size: 1.125rem</p>
+          <p class="text-lg pb-3 font-display">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-xl font-size: 1.25rem</p>
+          <p class="text-xl pb-3 font-display">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-2xl font-size: 1.5rem</p>
+          <p class="text-2xl pb-3 font-display">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-3xl font-size: 1.875rem</p>
+          <p class="text-3xl pb-3 font-display truncate">The quick brown fox jumps over the lazy dog.</p>
+          <p class="text-xs pb-3">text-4xl font-display OR h3/.h3 font-size: 2.25rem</p>
+          <h3 class="truncate pb-3">h3.The quick brown fox jumps over the lazy dog.</h3>
+          <p class="text-xs pb-3">text-5xl font-display OR h2/.h2 font-size: 3rem</p>
+          <h2 class="truncate pb-3">h2.The quick brown fox jumps over the lazy dog.</h2>
+          <p class="text-xs pb-3">text-6xl font-display OR h1/.h1 font-size: 4rem</p>
+          <p class="truncate h1 pb-3">h1.The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+      <div class="grid max-w-full gap-8 grid-cols-1 mt-16">
+        <div class="col-span-1">
+          <p class="h3 pb-0">Examples</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="col-span-1">
+            <div class="p-4 sm:p-14 border-l-2 border-blue-800 mt-8">
+              <p class="kicker text-green-500">Optional kicker</p>
+              <h2>Title that spans across two rows</h2>
+              <p class="pb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor.</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="col-span-1">
+            <div class="p-4 sm:p-14 border-l-2 border-blue-900">
+              <h2>Unordered List</h2>
+              <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor.</p>
+              <ul class="list-outside list-disc">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit, sed do eiolor</li>
+                <li>Sit amet temporem ipsum dolor sit amet</li>
+                <li>Onsectetur adipiscing elit</li>
+                <li>Bacon ipsum dolor amet kielbasa doner bresaola shank shoulder shankle. Beef ribs brisket prosciutto ham pork belly frankfurter landjaeger tri-tip shank shankle cupim jerky. Shankle drumstick pork, filet mignon frankfurter brisket jowl short ribs buffalo tail ham hock rump chislic biltong. Tenderloin landjaeger burgdoggen brisket strip steak buffalo, pork chop beef ham. Tri-tip picanha t-bone landjaeger chicken venison</li>
+                <li>Sed do eiolor sit amet tempor.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="col-span-1">
+            <div class="p-4 sm:p-14 border-l-2 border-blue-900">
+              <h2>Ordered List</h2>
+              <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor.</p>
+              <ul class="list-outside list-decimal">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit, sed do eiolor</li>
+                <li>Sit amet temporem ipsum dolor sit amet</li>
+                <li>Onsectetur adipiscing elit</li>
+                <li>Bacon ipsum dolor amet kielbasa doner bresaola shank shoulder shankle. Beef ribs brisket prosciutto ham pork belly frankfurter landjaeger tri-tip shank shankle cupim jerky. Shankle drumstick pork, filet mignon frankfurter brisket jowl short ribs buffalo tail ham hock rump chislic biltong. Tenderloin landjaeger burgdoggen brisket strip steak buffalo, pork chop beef ham. Tri-tip picanha t-bone landjaeger chicken venison</li>
+                <li>Sed do eiolor sit amet tempor.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="col-span-1">
+            <div class="p-4 sm:p-14 border-l-2 border-blue-900">
+              <h2>Paragraphs</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor. Lorem <strong>particularly important highlight</strong>, consectetur adipiscing elit, sed do eiolor sit amet tempor.</p>
+              <p class="pb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor. Lorem ipsum italic can be used for small highlights adipiscing elit, sed do eiolor sit amet tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <a href="#">primary link is easily visible</a> amet tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="buttons" class="py-28">
+    <div class="container mx-auto">
+      <div class="max-w-full grid gap-8 grid-cols-1">
+        <h2 class="h1">Buttons</h2>
+        <p class="lead pb-20">Not covering inverted variants just yet because not all colors are final, will expand as needed, this will be an evolving thing throughout the project as we see how the pages interact across.</p>
+      </div>
+      <div class="max-w-full grid gap-8 grid-cols-1 md:grid-cols-3">
+        <div class="col-span-1">
+          <h3>Primary</h3>
+          <p class="pb-8 pt-6">Main CTA button with a subtle green gradient over it, I don't anticipate us using XS anywhere on the marketing website, perhaps just for cookie propmts and such.</p>
+          <p class="text-xs pb-3">btn-primary btn-xs</p>
+          <a href="#" class="btn-primary btn-xs">
+            Primary CTA
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">btn-primary btn-sm</p>
+          <a href="#" class="btn-primary btn-sm">
+            Primary CTA
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">btn-primary btn</p>
+          <a href="#" class="btn-primary btn">
+            Primary CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">btn-primary btn-lg</p>
+          <a href="#" class="btn-primary btn-lg">
+            Primary CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">btn-primary btn-xl</p>
+          <a href="#" class="btn-primary btn-xl">
+            Primary CTA
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="col-span-1">
+          <h3>Secondary</h3>
+          <p class="pb-8 pt-6">Secondary CTA button that has no fill so needs to be nicely balanced with the background, uses an inverted scheme when on dark sections.<br />&nbsp;</p>
+          <p class="text-xs pb-3">btn-secondary btn-xs</p>
+          <a href="#" class="btn-secondary btn-xs">
+            Secondary CTA
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">btn-secondary btn-sm</p>
+          <a href="#" class="btn-secondary btn-sm">
+            Secondary CTA
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">btn-secondary btn</p>
+          <a href="#" class="btn-secondary btn">
+            Secondary CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">btn-secondary btn-lg</p>
+          <a href="#" class="btn-secondary btn-lg">
+            Secondary CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">btn-secondary btn-xl</p>
+          <a href="#" class="btn-secondary btn-xl">
+            Secondary CTA
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="col-span-1">
+          <h3>Hightlight Link</h3>
+          <p class="pb-8 pt-6">Whenever we want to put emphasis on the action that either doesn't fit as a secondary action on the page or helps balance it out vs primary using "Highlight” pattern.</p>
+          <p class="text-xs pb-3">text-sm font-size: .875rem</p>
+          <p class="text-sm">
+            <a href="#" class="inline-flex items-center">
+              Highlight Action Link
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </p>
+          <p class="text-xs pb-3">text-base font-size: 1rem</p>
+          <p>
+            <a href="#" class="inline-flex items-center">
+              Highlight Action Link
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </p>
+          <p class="text-xs pb-3">text-lg font-size: 1.125rem</p>
+          <p class="text-lg">
+            <a href="#" class="inline-flex items-center">
+              Highlight Action Link
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </p>
+          <p class="text-xs pb-3">text-xl font-size: 1.25remm</p>
+          <p class="text-xl">
+            <a href="#" class="inline-flex items-center">
+              Highlight Action Link
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="max-w-full grid gap-8 grid-cols-1 md:grid-cols-3 mt-16">
+        <div class="col-span-1">
+          <h3 class="pb-8">States</h3>
+          <p class="text-xs pb-3">default</p>
+          <a href="#" class="btn-primary btn">
+            Primary CTA
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">hover</p>
+          <a href="#" class="btn-primary hover btn">
+            Primary CTA
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">click</p>
+          <a href="#" class="btn-primary active btn">
+            Primary CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">disabled</p>
+          <button class="btn-primary btn" disabled>
+            Primary CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="col-span-1">
+          <h3 class="pb-8">&nbsp;</h3>
+          <p class="text-xs pb-3">default</p>
+          <a href="#" class="btn-secondary btn">
+            Primary CTA
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">hover</p>
+          <a href="#" class="btn-secondary hover btn">
+            Primary CTA
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">click</p>
+          <a href="#" class="btn-secondary active btn">
+            Primary CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <p class="text-xs pb-3 pt-6">disabled</p>
+          <button class="btn-secondary btn" disabled>
+            Primary CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="col-span-1">
+          <h3 class="pb-8">&nbsp;</h3>
+          <p class="text-xs pb-3">default</p>
+          <p>
+            <a href="#" class="inline-flex items-center">
+              Highlight Action Link
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </p>
+          <p class="text-xs pb-3">hover</p>
+          <p>
+            <a href="#" class="hover inline-flex items-center">
+              Highlight Action Link
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </p>
+          <p class="text-xs pb-3">click</p>
+          <p>
+            <a href="#" class="active inline-flex items-center">
+              Highlight Action Link
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="badges" class="py-28">
+    <div class="container mx-auto">
+      <div class="max-w-full grid grid-cols-1">
+        <h2 class="h1">Badges</h2>
+        <p class="lead pb-7">When we merge into a unified design system with marketing and app side, we'll have more variation with badges being used as a notification element as well (and part of buttons), for the site alone I only aniticipate using these for sales and specific highlights.</p>
+        <p class="text-xs pb-3">badge</p>
+        <p><span class="mb-3 badge">Highlight</span></p>
+        <p class="text-xs pb-3">badge-lg</p>
+        <p><span class="mb-3 badge-lg">Highlight</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="grid" class="">
+    <div class="container mx-auto">
+      <h4 class="pb-4">Grid columns with flex for content alignment (work in progress)</h4>
+      <div class="max-w-full grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 text-white">
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">1</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">2</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">3</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">4</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">5</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">6</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">7</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">8</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">9</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">10</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">11</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">12</div>
+      </div>
+    </div>
+  </section>
+  <section id="flex" class="">
+    <div class="container mx-auto">
+      <h4 class="mt-4">Flex only columns (work in progress)</h4>
+      <div class="flex flex-wrap -mx-4 text-white">
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">1</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">2</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">3</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">4</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">5</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">6</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">7</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">8</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">9</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">10</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">11</span></div>
+        <div class="w-full sm:w-1/2 md:w-1/6 lg:w-1/12 px-4 my-4"><span class="bg-blue-900 aspect-square flex justify-center items-center">12</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="text-groups-grid" class="py-28">
+    <div class="container mx-auto">
+      <div class="max-w-full grid grid-cols-1 text-center">
+        <p class="kicker text-green-500">Optional Kicker</p>
+        <h2 class="max-w-lg mx-auto">Icon Groups (using grid + flex for layout)</h2>
+        <h3 class="pb-10 text-base font-body text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor.</h3>
+        <!-- Use H3 for sequentially-descending order -->
+      </div>
+      <div class="grid w-full grid-cols-1 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-4">
+        <div class="col-span-1">
+          <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto">
+            <div class="relative w-[48px] h-[48px] mb-4 hp-icon">
+              <svg class="w-[48px] h-[48px] absolute svg-top" fill="none" viewBox="0 0 24 24" stroke="#222222">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+              <svg class="w-[48px] h-[48px] absolute svg-bottom duration-500 ease-in-out opacity-40" fill="#A5BE00" viewBox="0 0 24 24" stroke="none">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+          </div>
+          <h4>Spotlight can easily span across two rows or more</h4>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa ntium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.</p>
+        </div>
+        <div class="col-span-1">
+          <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto">
+            <div class="relative w-[48px] h-[48px] mb-4 hp-icon">
+              <svg class="w-[48px] h-[48px] absolute svg-top" fill="none" viewBox="0 0 24 24" stroke="#222222">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+              </svg>
+              <svg class="w-[48px] h-[48px] absolute svg-bottom duration-500 ease-in-out opacity-40" fill="#A5BE00" viewBox="0 0 24 24" stroke="none">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+              </svg>
+            </div>
+          </div>
+          <h4>Spotlight can easily span across two rows or more</h4>
+          <p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
+        </div>
+        <div class="col-span-1">
+          <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto">
+            <div class="relative w-[48px] h-[48px] mb-4 hp-icon">
+              <svg class="w-[48px] h-[48px] absolute svg-top" fill="none" viewBox="0 0 24 24" stroke="#222222">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+              </svg>
+              <svg class="w-[48px] h-[48px] absolute svg-bottom duration-500 ease-in-out opacity-40" fill="#A5BE00" viewBox="0 0 24 24" stroke="none">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+              </svg>
+            </div>
+          </div>
+          <h4>Spotlight can easily span across two rows or more</h4>
+          <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
+        </div>
+        <div class="col-span-1">
+          <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto">
+            <div class="relative w-[48px] h-[48px] mb-4 hp-icon">
+              <svg class="w-[48px] h-[48px] absolute svg-top" fill="none" viewBox="0 0 24 24" stroke="#222222">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <svg class="w-[48px] h-[48px] absolute svg-bottom duration-500 ease-in-out opacity-40" fill="#A5BE00" viewBox="0 0 24 24" stroke="none">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+          </div>
+          <h4>Single row example</h4>
+          <p>Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="text-groups-flex" class="py-28">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full px-4">
+          <div class="text-center">
+            <p class="kicker text-green-500">Optional Kicker</p>
+            <h2 class="lg:w-6/12 mx-auto">Icon Groups (using flex only for layout)</h2>
+            <h3 class="pb-10 text-base font-body text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor.</h3>
+            <!-- Use H3 for sequentially-descending order -->
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full md:w-1/2 lg:w-3/12 px-4">
+          <div class="relative w-[48px] h-[48px] mb-4 hp-icon">
+            <svg class="w-[48px] h-[48px] absolute svg-top" fill="none" viewBox="0 0 24 24" stroke="#222222">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+            <svg class="w-[48px] h-[48px] absolute svg-bottom duration-500 ease-in-out opacity-40" fill="#A5BE00" viewBox="0 0 24 24" stroke="none">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h4>Spotlight can easily span across two rows or more</h4>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa ntium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.</p>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-3/12 px-4">
+          <div class="relative w-[48px] h-[48px] mb-4 hp-icon">
+            <svg class="w-[48px] h-[48px] absolute svg-top" fill="none" viewBox="0 0 24 24" stroke="#222222">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+            </svg>
+            <svg class="w-[48px] h-[48px] absolute svg-bottom duration-500 ease-in-out opacity-40" fill="#A5BE00" viewBox="0 0 24 24" stroke="none">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+            </svg>
+          </div>
+          <h4>Spotlight can easily span across two rows or more</h4>
+          <p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-3/12 px-4">
+          <div class="relative w-[48px] h-[48px] mb-4 hp-icon">
+            <svg class="w-[48px] h-[48px] absolute svg-top" fill="none" viewBox="0 0 24 24" stroke="#222222">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+            </svg>
+            <svg class="w-[48px] h-[48px] absolute svg-bottom duration-500 ease-in-out opacity-40" fill="#A5BE00" viewBox="0 0 24 24" stroke="none">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+            </svg>
+          </div>
+          <h4>Spotlight can easily span across two rows or more</h4>
+          <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-3/12 px-4">
+          <div class="relative w-[48px] h-[48px] mb-4 hp-icon">
+            <svg class="w-[48px] h-[48px] absolute svg-top" fill="none" viewBox="0 0 24 24" stroke="#222222">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <svg class="w-[48px] h-[48px] absolute svg-bottom duration-500 ease-in-out opacity-40" fill="#A5BE00" viewBox="0 0 24 24" stroke="none">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h4>Single row example</h4>
+          <p>Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hero" class="py-60 bg-orange-50">
+    <div class="container mx-auto">
+      <div class="max-w-full grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 text-white">
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">1</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">2</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">3</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">4</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">5</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">6</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">7</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">8</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">9</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">10</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">11</div>
+        <div class="col-span-1 bg-blue-900 aspect-square flex justify-center items-center">12</div>
+      </div>
+      <div class="max-w-full grid grid-cols-1 lg:grid-cols-2 items-center">
+        <div class="col-span-1">
+          <p class="kicker text-blue-800">Optional kicker</p>
+          <h1 class="pb-5">Baking is hard. Making websites is easy, try it!</h1>
+          <h2 class="pb-8 lead font-body text-gray-200">Every plan comes feature packed with professionally designed templates if you want a quick result fast.</h2>
+          <p class="pb-0 mb-8 sm:mb-0">
+            <a href="#" class="btn-primary btn-lg sm:mr-5 mb-4">
+              Primary CTA
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </p>
+        </div>
+        <div class="col-span-1">
+          <img class="lazy-loaded sm:px-14" src="https://via.placeholder.com/720" data-lazy-type="image" data-src="https://via.placeholder.com/720" alt="Square placeholder image 720px" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <svg width="100%" height="100%" viewBox="0 0 500 15" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
+    <g transform="matrix(1,0,0,1,-142.177,-227.744)">
+      <g transform="matrix(1,0,0,0.113732,142.177,227.744)">
+        <path d="M0,100C150,200 350,0 500,100L500,0L0,0L0,100Z" class="fill-orange-50" style="fill-rule: nonzero"></path>
+      </g>
+    </g>
+  </svg>
+
+  <section id="hero-3" class="py-60 bg-blue-100">
+    <div class="container mx-auto">
+      <div class="max-w-full grid grid-cols-1 lg:grid-cols-2">
+        <div class="col-span-1">
+          <p class="kicker text-blue-800">Optional kicker</p>
+          <h1 class="pb-5">Title that spans across two rows or more</h1>
+          <h2 class="pb-8 lead font-body text-gray-200">Subtitle here lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor.</h2>
+          <p class="pb-0 mb-8 sm:mb-0">
+            <a href="#" class="btn-primary btn sm:mr-5 mb-4">
+              Primary CTA
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <br class="sm:hidden" />
+            <a href="#" class="btn-secondary btn">
+              Secondary CTA
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </p>
+        </div>
+        <div class="col-span-1">
+          <p><img class="lazy-loaded sm:px-14" src="https://via.placeholder.com/720" data-lazy-type="image" data-src="https://via.placeholder.com/720" alt="Square placeholder image 720px" /></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <svg width="100%" height="100%" viewBox="0 0 500 15" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
+    <g transform="matrix(1,0,0,1,-142.177,-227.744)">
+      <g transform="matrix(1,0,0,0.113732,142.177,227.744)">
+        <path d="M0,100C150,200 350,0 500,100L500,0L0,0L0,100Z" class="fill-blue-100" style="fill-rule: nonzero"></path>
+      </g>
+    </g>
+  </svg>
+
+  <svg width="100%" height="100%" viewBox="0 0 500 15" class="transform -rotate-180" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
+    <g transform="matrix(1,0,0,1,-142.177,-227.744)">
+      <g transform="matrix(1,0,0,0.113732,142.177,227.744)">
+        <path d="M0,100C150,200 350,0 500,100L500,0L0,0L0,100Z" class="fill-green-100" style="fill-rule: nonzero"></path>
+      </g>
+    </g>
+  </svg>
+  <section id="hero-2" class="py-60 bg-green-100">
+    <div class="container mx-auto">
+      <div class="max-w-full grid grid-cols-1 text-center">
+        <h1 class="mx-auto pb-5">Centered title that spans across two rows</h1>
+        <h2 class="pb-8 lead font-body text-gray-200 lg:w-8/12 mx-auto">Subtitle here lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiolor sit amet tempor.</h2>
+        <p class="pb-0">
+          <a href="#" class="btn-primary btn mb-4">
+            Primary CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <br class="sm:hidden" />
+          <span class="pr-3 sm:px-5">or</span>
+          <a href="#" class="inline-flex items-center">
+            Secondary Link CTA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="transform transition-transform duration-500 ease-in-out opacity-50">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <svg width="100%" height="100%" viewBox="0 0 500 15" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
+    <g transform="matrix(1,0,0,1,-142.177,-227.744)">
+      <g transform="matrix(1,0,0,0.113732,142.177,227.744)">
+        <path d="M0,100C150,200 350,0 500,100L500,0L0,0L0,100Z" class="fill-green-100" style="fill-rule: nonzero"></path>
+      </g>
+    </g>
+  </svg>
+</LanderLayout>

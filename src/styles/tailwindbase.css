@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-body text-base text-gray-300;
+        line-height: 1.875rem;
+    }
+
+    h6,
+    .h6,
+    h5,
+    .h5,
+    h4,
+    .h4,
+    h3,
+    .h3,
+    h2,
+    .h2,
+    h1,
+    .h1 {
+        @apply font-display text-gray-900;
+    }
+
+    h1,
+    .h1 {
+        @apply text-4xl sm:text-6xl leading-8 sm:leading-13;
+    }
+
+    h2,
+    .h2 {
+        @apply text-4xl sm:text-5xl leading-8 sm:leading-11;
+        padding-bottom: 0.875rem;
+    }
+
+    h3,
+    .h3 {
+        @apply text-4xl leading-9;
+    }
+
+    h4,
+    .h4 {
+        @apply text-lg leading-5;
+    }
+
+    .font-bold,
+    .font-display,
+    b,
+    strong {
+        @apply text-gray-900;
+    }
+
+    a {
+        @apply text-blue-800 font-bold;
+    }
+
+    a:active,
+    a.active,
+    a:focus,
+    a.focus {
+        @apply text-blue-900 font-bold underline;
+    }
+
+    a:hover,
+    a.hover {
+        @apply text-blue-800 font-bold underline;
+    }
+
+    a:active svg,
+    a.active svg,
+    a:focus svg,
+    a.focus svg {
+        opacity: 1;
+    }
+
+    a:hover svg,
+    a.hover svg {
+        transform: translateX(4px);
+        opacity: 1;
+    }
+
+    .isdisabled,
+    .isdisabled:hover {
+        @apply cursor-not-allowed text-gray-200 opacity-50 no-underline;
+    }
+
+    p {
+        padding-bottom: 2.5rem;
+    }
+
+    ul,
+    ol {
+        line-height: 1.875rem;
+        margin-left: 2.5rem;
+    }
+
+    ul li,
+    ol li {
+        padding-bottom: 0.5rem;
+    }
+
+    .list-disc {
+        list-style-type: none;
+    }
+
+    .list-disc li:before {
+        content: "\2022";
+        font-weight: 700;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1rem;
+        @apply text-green-400;
+    }
+
+    .lead {
+        @apply text-xl leading-6 sm:text-lead;
+    }
+
+    .kicker {
+        @apply font-medium uppercase text-lg;
+        padding-bottom: 0.75rem;
+    }
+
+    .btn-primary {
+        @apply bg-gradient-to-r from-green-600 to-green-700 font-bold text-white inline-flex items-center;
+        line-height: 1;
+    }
+
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary.active,
+    .btn-primary.focus {
+        @apply bg-gradient-to-r from-green-900 to-green-900 text-white no-underline;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:visited,
+    .btn-primary.hover,
+    .btn-primary.visited {
+        @apply bg-gradient-to-r from-green-800 to-green-800 text-white no-underline;
+    }
+
+    .btn-primary:hover svg {
+        transform: translateX(4px);
+        opacity: 1;
+    }
+
+    .btn-primary svg {
+        margin-left: 5px;
+    }
+
+    .btn-primary:disabled,
+    .btn-primary[disabled] {
+        @apply bg-gradient-to-r from-gray-200 to-gray-200;
+        opacity: 0.3;
+    }
+
+    .btn-secondary {
+        @apply font-bold text-blue-800 inline-flex items-center ring-2 ring-inset ring-blue-800;
+        line-height: 1;
+    }
+
+    .btn-secondary:active,
+    .btn-secondary:focus,
+    .btn-secondary.active,
+    .btn-secondary.focus {
+        @apply bg-blue-800 text-white no-underline !important;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary.hover {
+        @apply text-blue-800 no-underline;
+    }
+
+    .btn-secondary:hover svg,
+    .btn-secondary.hover svg {
+        transform: translateX(4px);
+        opacity: 1;
+    }
+
+    .btn-secondary svg {
+        margin-left: 5px;
+    }
+
+    .btn-secondary:disabled,
+    .btn-secondary[disabled] {
+        @apply bg-white font-bold text-gray-200 inline-flex items-center ring-2 ring-inset ring-gray-200;
+        opacity: 0.3;
+    }
+
+    .btn {
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+        border-radius: 12px;
+    }
+
+    .btn-xs {
+        font-size: 0.875rem;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+    }
+
+    .btn-sm {
+        font-size: 1rem;
+        padding: 1rem 1.25rem;
+        border-radius: 10px;
+    }
+
+    .btn-lg {
+        font-size: 1.125rem;
+        padding: 1.125rem 1.875rem;
+        border-radius: 14px;
+    }
+
+    .btn-xl {
+        font-size: 1.25rem;
+        padding: 1.25rem 1.875rem;
+        border-radius: 14px;
+    }
+
+    .svg-top {
+        z-index: 2;
+        left: 0;
+        top: 0;
+    }
+
+    .svg-bottom {
+        z-index: 1;
+        left: 5px;
+        top: 5px;
+    }
+
+    .hp-icon:hover .svg-bottom {
+        transform: translate(-10%, -10%);
+    }
+
+    .badge {
+        @apply inline-flex items-center justify-center px-2.5 py-2 text-sm font-bold leading-none text-blue-800 bg-blue-100 rounded-md;
+    }
+
+    .badge-lg {
+        @apply inline-flex items-center justify-center px-3.5 py-2.5 text-lg font-bold leading-none text-blue-800 bg-blue-100 rounded-md;
+    }
+}
+
+@layer components {}
